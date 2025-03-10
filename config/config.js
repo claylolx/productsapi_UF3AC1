@@ -1,3 +1,5 @@
+require('dotenv').config(); // Cargar variables de entorno
+
 module.exports = {
-  mongoURI: "mongodb+srv://clay:clay@cluster0.ax1pv.mongodb.net/"
+  mongoURI: process.env.MONGO_URI || "fallback_value_if_env_missing"
 };
